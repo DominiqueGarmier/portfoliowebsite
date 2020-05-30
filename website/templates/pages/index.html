@@ -1,0 +1,32 @@
+{% load static %}
+{% extends 'base.html' %}
+
+{% block title%}Welcome{% endblock %}
+
+{% block banner %}
+
+<div id="BannerCarousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="row-fluid">
+            <div class="span12 pagination-centered"><img class="img-fluid" src="media/placeholders/1.png" alt="header" /></div>
+         </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row-fluid">
+            <div class="span12 pagination-centered"><img class="img-fluid" src="media/placeholders/1.png" alt="header" /></div>
+         </div>
+      </div>
+      <div class="carousel-item">
+        <div class="row-fluid">
+            <div class="span12 pagination-centered"><img class="img-fluid" src="media/placeholders/1.png" alt="header" /></div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block content %}
+<div class="h1">The actual content:</div>
+{% endblock %}
