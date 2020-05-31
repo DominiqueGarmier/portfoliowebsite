@@ -10,11 +10,19 @@
 {% block banner %}
 <div class="banner">
     <div class="background">
-        <div class="image" style="background-image: url('{% static "img/placeholders/1.png" %}');"></div>
+        <div class="image" style="background-image: url('{% static "img/placeholders/w.png" %}');"></div>
     </div>
     <div class="overlay">
-        <h1>Overlay</h1>
-        <p>this is a paragraph</p>
+        <div class="title">
+            <div style="font-weight: bold; font-size: 72pt;">Welcome</div>
+            <div style="font-size: 16pt;">to a portfolio website...</div>
+        </div>
+        <div id="scroll-down-prompt">
+            <div class="text" style="color: white;">scroll down</div>
+            <div class="arrow">
+                <img src="{% static 'img/icons/google-icon-pack/svg/downwards-arrow-key-w.svg' %}" alt="down-arrow" style="max-width: 100%;">
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
@@ -32,7 +40,7 @@ p.temp {
 {% endblock %}
 
 {% block footer %}
-        <div>Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+<div>Icons made by <a style="font-weight: 300;" href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a style="font-weight: 300;" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
 {% endblock %}
 
 

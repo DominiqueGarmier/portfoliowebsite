@@ -1,5 +1,3 @@
-console.log('test message')
-
 // pause animation
 var SlideInMenu = document.getElementById("slide-in-menu")
 var OpenMenuBtn = document.getElementById("open-menu-btn")
