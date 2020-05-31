@@ -1,6 +1,26 @@
-<nav class="nav-bar">
-    <a href="wikipedia.org"> Home </a>
-    <a href="google.com"> About </a>
-    <a href="youtube.com"> Projects </a>
-    <a href="#"> Contact </a>
-</nav>
+{% load static %}
+
+<div id="sidebar">
+    <div class="menu-btn open" id="open-menu-btn">
+        <img src="{% static 'img/icons/google-icon-pack/svg/menu-button.svg' %}" alt="hamburger-icon" onclick="OpenMenu()">
+    </div>
+    <div class="menu-btn close" id="close-menu-btn">
+        <img src="{% static 'img/icons/google-icon-pack/svg/close-button.svg' %}" alt="x-icon" onclick="CloseMenu()">
+    </div>
+    <div class="anim-slide-in slide-in-menu" id="slide-in-menu">
+        <div id="opt-container">
+            <div class="option">
+                <a href="#"> Home </a>
+            </div>
+            <div class="option">
+                <a href="#"> About </a>
+            </div>
+            <div class="option">
+                <a href="#"> Projects </a>
+            </div>
+            <div class="option">
+                <a href="#"> Contact </a>
+            </div>
+        </div>
+    </div>
+</div>

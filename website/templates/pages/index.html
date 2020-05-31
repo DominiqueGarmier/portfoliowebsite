@@ -10,17 +10,31 @@
 {% block banner %}
 <div class="banner">
     <div class="background">
-        <div class="image" style="background-image: {% static 'img/placeholders/1.png' %}"></div>
+        <div class="image" style="background-image: url('{% static "img/placeholders/1.png" %}');"></div>
     </div>
     <div class="overlay">
-    
+        <h1>Overlay</h1>
+        <p>this is a paragraph</p>
     </div>
 </div>
 {% endblock %}
 
 {% block content %}
-<p> content </p>
+<style>
+p.temp {
+    padding-bottom: 10cm;
+}
+</style>
+<p class="temp">content</p>
+<p class="temp">content</p>
+<p class="temp">content</p>
+<p class="temp">content</p>
 {% endblock %}
+
+{% block footer %}
+        <div>Icons made by <a href="https://www.flaticon.com/authors/google" title="Google">Google</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+{% endblock %}
+
 
 {% block requiredjs %}
 <script type="text/javascript" src="{% static 'js/pages/main.js' %}"></script>

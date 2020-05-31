@@ -13,16 +13,22 @@
         <title> Dominique Garmier {% block title %}{% endblock %} </title>
     </head>
     <body>
-        {% block banner %}{% endblock %}
+        <div class="overflow-wrapper">
+            {% block banner %}{% endblock %}
 
-        <!-- navbar -->
-        {% include 'partials/_navbar.html' %}
+            <!-- navbar -->
+            {% include 'partials/_navbar.html' %}
 
-        <!-- content block -->
-        <div class="content">
-            {% block content %}{% endblock %}
+            <!-- content block -->
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+
+            <div class="footer">
+                {% block footer %}{% endblock %}
+            </div>
         </div>
-
+        
         <!-- javascript -->
         <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
         {% block requiredjs %}{% endblock %}
