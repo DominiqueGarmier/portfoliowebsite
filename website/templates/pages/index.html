@@ -1,56 +1,27 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title%}Welcome{% endblock %}
-
-{% block banner %}
-
-<div class="BannerContainer">
-  <div class="BannerBg">
-    <div id="BannerCarousel" class="carousel slide" data-ride="carousel">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="row-fluid">
-            <div class="BannerImage" style="background-image: url('media/placeholders/1.png')"></div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row-fluid">
-            <div class="BannerImage" style="background-image: url('media/placeholders/2.png')"></div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="row-fluid">
-            <div class="BannerImage" style="background-image: url('media/placeholders/3.png')"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="BannerOv">
-    <div class="h1" style="font-size:20vw">Welcome</div>
-  </div>
-</div>
-
+{% block requiredcss %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/pages/style.css' %}">
 {% endblock %}
 
+{% block title%} Welcome {% endblock %}
 
+{% block banner %}
+<div class="banner">
+    <div class="background">
+        <div class="image" style="background-image: {% static 'img/placeholders/1.png' %}"></div>
+    </div>
+    <div class="overlay">
+    
+    </div>
+</div>
+{% endblock %}
 
 {% block content %}
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
-<h1>content</h1>
+<p> content </p>
+{% endblock %}
+
+{% block requiredjs %}
+<script type="text/javascript" src="{% static 'js/pages/main.js' %}"></script>
 {% endblock %}
