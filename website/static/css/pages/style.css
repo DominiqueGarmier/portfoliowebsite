@@ -75,7 +75,44 @@
 }
 
 .content-paragraph {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    position: relative;
+    margin-top: 20em;
+    margin-bottom: 20em;
 }
 
+.content-paragraph .text {
+    position: absolute;
+    width: 50%;
+}
+
+.content-paragraph .img {
+    position: absolute;
+    width: 50%;
+}
+
+#about-paragraph {
+    height: 20em;
+}
+
+#about-text {
+    text-align: right;
+    left: -2em;
+}
+
+#about-img {
+    right: -2em;
+}
+
+
+#projects-paragraph {
+    height: 10em;
+}
+
+#projects-text {
+    right: -2em;
+}
+
+#projects-img {
+    text-align: right;
+    left: -2em;
+}
