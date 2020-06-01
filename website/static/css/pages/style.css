@@ -8,6 +8,7 @@
     position: absolute;
     left: 50%;
     top: 0%;
+    opacity: 0;
 }
 
 .banner .background {
@@ -69,11 +70,6 @@
     transform: translate(-50%, 0);
 }
 
-.empty-height {
-    height: 20vh;
-    width: 100%;
-}
-
 .content-paragraph {
     position: relative;
     margin-top: 20em;
@@ -96,11 +92,11 @@
 
 #about-text {
     text-align: right;
-    left: -2em;
+    left: -10vw;
 }
 
 #about-img {
-    right: -2em;
+    right: -10vw;
 }
 
 
@@ -109,10 +105,10 @@
 }
 
 #projects-text {
-    right: -2em;
+    right: -10vw;
 }
 
 #projects-img {
     text-align: right;
-    left: -2em;
+    left: -10vw;
 }

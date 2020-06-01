@@ -6,7 +6,7 @@
 ::-webkit-scrollbar-track {
   background: #d1d1d1; 
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: #888; 
 }
@@ -120,8 +120,8 @@ a {
 }
 
 .content {
-    margin-left: 20vw;
     margin-right: 20vw;
+    margin-left: 20vw;
     position: relative;
     z-index: -1;
 }
