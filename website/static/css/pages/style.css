@@ -1,48 +1,40 @@
-.banner {
-    height: 100vh;
-    width: 100%;
+/* banner style */
+.moving-banner {
     position: relative;
-}
-
-#moving-banner {
-    position: absolute;
-    left: 50%;
-    top: 0%;
+    width: 100%;
+    height: 100vh;
     opacity: 0;
 }
 
-.banner .background {
+.moving-banner .background {
     position: absolute;
-    height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
+    height: 100vh;
     z-index: -1;
 }
 
-.banner .background .image {
+.moving-banner .background .image {
     height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;   
+    background-position: center center;
 }
 
-.banner .overlay {
-    height: 100vh;
+.moving-banner .overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.moving-banner .overlay .title {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+    top: 30%;
 }
 
-.banner .overlay .title {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#scroll-down-prompt {
+.scroll-down-prompt {
     position: absolute;
     bottom: 0;
     opacity: 1;
@@ -52,24 +44,24 @@
     background-color: black;
     padding-top: 0.75em;
     height: 4em;
-    width: 100vw;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
 }
 
-#scroll-down-prompt .text {
-    width: 100vw;
+.scroll-down-prompt .text {
+    width: 100%;
     text-align: center;
 }
 
-#scroll-down-prompt .arrow {
+.scroll-down-prompt .arrow {
     position: absolute;
-    height: 1em;
+    height: 2em;
     width: 2em;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
+
+/* content and paragraphs */
 .content-paragraph {
     position: relative;
     margin-top: 20em;
