@@ -2,33 +2,37 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--bootstrap css-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!--custom sytles.css-->
-    <link rel="stylesheet" type="text/css" href="{% static 'css/pages/style.css' %}">
-    
+        <!-- css -->
+        <link rel="stylesheet" type="text/css" href="{% static 'css/base.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;0,900;1,100;1,400&display=swap" rel="stylesheet">
+        
+        {% block requiredcss %} {% endblock %}
 
-    
-    <title>Dominique Garmier {% block title %}{% endblock %}</title>
-</head>
-<body>
-    {% block banner %}{% endblock %}
+        <title> Dominique Garmier | {% block title %}{% endblock %} </title>
+    </head>
+    <body>
+        <div class="overflow-wrapper">
+            {% block banner %}{% endblock %}
 
-    <!--navbar-->
-    {% include 'partials/_navbar.html' %}
-    
-    <a name="home">
-        <div class="container">
-            {% block content %}{% endblock %}
+            <!-- navbar -->
+            {% include 'partials/_navbar.html' %}
+
+            <!-- content block -->
+            <div class="content">
+                {% block content %}{% endblock %}
+            </div>
+
+            <div class="footer">
+                {% block footer %}{% endblock %}
+            </div>
         </div>
-    </a>
-    <!--bootstrap js-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-</body>
+        
+        <!-- javascript -->
+        <script type="text/javascript" src="{% static 'js/base.js' %}"></script>
+        {% block requiredjs %}{% endblock %}
+    </body>
 </html>

@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "/home/dominique/venvs/django/bin/python"
+    "python.pythonPath": "/home/dominique/venvs/django/bin/python",
+    "editor.detectIndentation": false
 }

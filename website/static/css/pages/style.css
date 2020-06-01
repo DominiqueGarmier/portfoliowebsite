@@ -1,77 +1,81 @@
-@import '../base.css';
-
-/* Banner Style*/
-.BannerImage {
-  height: 100vh;
-  width: 100vw;
-  max-width: 100%;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  margin-left: 0;
-  margin-right: 0;
-  opacity: 1;
+.banner {
+    height: 100vh;
+    width: 100%;
+    position: relative;
 }
 
-.BannerContainer {
-  height: 100vh;
-  position: relative;
+#moving-banner {
+    position: absolute;
+    left: 50%;
+    top: 0%;
 }
 
-.BannerOv {
-  position: absolute;
-  z-index: 10;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translate(-50%,-50%);
-
-  text-align: center;
-  font-size: 16em;
+.banner .background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
 }
 
-/* navbar dropdown menu animation */
-@media (min-width: 992px) {
-  .animate {
-    animation-duration: 0.3s;
-    -webkit-animation-duration: 0.3s;
-    animation-fill-mode: both;
-    -webkit-animation-fill-mode: both;
-  }
+.banner .background .image {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;   
 }
 
-@keyframes slideIn {
-  0% {
-    transform: translateY(1rem);
-    opacity: 0;
-  }
-  100% {
-    transform:translateY(0rem);
+.banner .overlay {
+    height: 100vh;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.banner .overlay .title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#scroll-down-prompt {
+    position: absolute;
+    bottom: 0;
     opacity: 1;
-  }
-  0% {
-    transform: translateY(1rem);
-    opacity: 0;
-  }
+    animation-name: slide-up-anim;
+    animation-duration: 1s;
+
+    background-color: black;
+    padding-top: 0.75em;
+    height: 4em;
+    width: 100vw;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
-@-webkit-keyframes slideIn {
-  0% {
-    -webkit-transform: transform;
-    -webkit-opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateY(0);
-    -webkit-opacity: 1;
-  }
-  0% {
-    -webkit-transform: translateY(1rem);
-    -webkit-opacity: 0;
-  }
+#scroll-down-prompt .text {
+    width: 100vw;
+    text-align: center;
 }
 
-.slideIn {
-  -webkit-animation-name: slideIn;
-  animation-name: slideIn;
+#scroll-down-prompt .arrow {
+    position: absolute;
+    height: 1em;
+    width: 2em;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
+
+.empty-height {
+    height: 20vh;
+    width: 100%;
+}
+
+.content-paragraph {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+
