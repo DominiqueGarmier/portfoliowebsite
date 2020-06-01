@@ -4,6 +4,12 @@
     position: relative;
 }
 
+#moving-banner {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+}
+
 .banner .background {
     position: absolute;
     height: 100%;
@@ -62,3 +68,14 @@
     left: 50%;
     transform: translate(-50%, 0);
 }
+
+.empty-height {
+    height: 20vh;
+    width: 100%;
+}
+
+.content-paragraph {
+    margin-top: 5em;
+    margin-bottom: 5em;
+}
+

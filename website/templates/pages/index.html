@@ -9,34 +9,41 @@
 
 {% block banner %}
 <div class="banner">
-    <div class="background">
-        <div class="image" style="background-image: url('{% static "img/placeholders/w.png" %}');"></div>
-    </div>
-    <div class="overlay">
-        <div class="title">
-            <div style="font-weight: bold; font-size: 72pt;">Welcome</div>
-            <div style="font-size: 16pt;">to a portfolio website...</div>
+    <div id="moving-banner">
+        <div class="background">
+            <div class="image" style="background-image: url('{% static "img/placeholders/w.png" %}');"></div>
         </div>
-        <div id="scroll-down-prompt">
-            <div class="text" style="color: white;">scroll down</div>
-            <div class="arrow">
-                <img src="{% static 'img/icons/google-icon-pack/svg/downwards-arrow-key-w.svg' %}" alt="down-arrow" style="max-width: 100%;">
+        <div class="overlay">
+            <div class="title">
+                <div style="font-weight: bold; font-size: 72pt;">Welcome</div>
+                <div style="font-size: 16pt;">to a portfolio website...</div>
+            </div>
+            <div id="scroll-down-prompt">
+                <div class="text" style="color: white;">scroll down</div>
+                <div class="arrow">
+                    <img src="{% static 'img/icons/google-icon-pack/svg/downwards-arrow-key-w.svg' %}" alt="down-arrow" style="max-width: 100%;">
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 {% endblock %}
 
 {% block content %}
-<style>
-p.temp {
-    padding-bottom: 10cm;
-}
-</style>
-<p class="temp">content</p>
-<p class="temp">content</p>
-<p class="temp">content</p>
-<p class="temp">content</p>
+<div class="empty-height"></div>
+
+<div class="content-paragraph" id="about">
+    <div id="about-text">
+        <h1>About</h1>
+        <p>this is a story about me</p>
+        <p>blablabla</p>
+        <p>some more stories...</p>
+    </div>
+    <div id="about-img">
+        img
+    </div>
+</div>
 {% endblock %}
 
 {% block footer %}
