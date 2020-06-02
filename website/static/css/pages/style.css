@@ -1,47 +1,74 @@
-.banner {
-    height: 100vh;
-    width: 100%;
+/* banner style */
+.moving-banner {
     position: relative;
-}
-
-#moving-banner {
-    position: absolute;
-    left: 50%;
-    top: 0%;
-}
-
-.banner .background {
-    position: absolute;
-    height: 100%;
     width: 100%;
-    top: 0;
-    left: 0;
+    height: 100vh;
+    opacity: 0;
+}
+
+.moving-banner .background {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
     z-index: -1;
 }
 
-.banner .background .image {
+.moving-banner .background .image {
     height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;   
+    background-position: center center;
 }
 
-.banner .overlay {
-    height: 100vh;
+.moving-banner .overlay {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.moving-banner .overlay .title {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
+    text-align: center;
+    top: 35%;
 }
 
-.banner .overlay .title {
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+/* respnsive title font size */
+@media only screen and (max-width: 300px) {
+    .moving-banner .overlay .title .main-title {
+        font-weight: bold;
+        font-size: 44pt;-
+    }
+
+    .moving-banner .overlay .title .sub-title {
+        font-size: 14pt;
+    }
 }
 
-#scroll-down-prompt {
+@media only screen and (min-width: 300px) {
+    .moving-banner .overlay .title .main-title {
+        font-weight: bold;
+        font-size: 52pt;
+    }
+
+    .moving-banner .overlay .title .sub-title {
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .moving-banner .overlay .title .main-title {
+        font-weight: bold;
+        font-size: 72pt;
+    }
+
+    .moving-banner .overlay .title .sub-title {
+        font-size: 16pt;
+    }
+}
+
+.scroll-down-prompt {
     position: absolute;
     bottom: 0;
     opacity: 1;
@@ -51,31 +78,122 @@
     background-color: black;
     padding-top: 0.75em;
     height: 4em;
-    width: 100vw;
-    left: 50%;
-    transform: translate(-50%, 0);
+    width: 100%;
 }
 
-#scroll-down-prompt .text {
-    width: 100vw;
+.scroll-down-prompt .text {
+    width: 100%;
     text-align: center;
 }
 
-#scroll-down-prompt .arrow {
+.scroll-down-prompt .arrow {
     position: absolute;
-    height: 1em;
+    height: 2em;
     width: 2em;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
-.empty-height {
-    height: 20vh;
-    width: 100%;
-}
 
+/* content and paragraphs */
 .content-paragraph {
-    margin-top: 5em;
-    margin-bottom: 5em;
+    position: relative;
+    margin-top: 20em;
+    margin-bottom: 20em;
 }
 
+.content-paragraph .text {
+    position: absolute;
+    width: 50%;
+}
+
+.content-paragraph .img {
+    position: absolute;
+    width: 50%;
+}
+
+@media only screen and (max-width: 900px) {
+    #about-paragraph {
+        height: 20em;
+    }
+    
+    #about-text {
+        width: 100%;
+        bottom: 0%;
+    }
+    
+    #about-img {
+        width: 100%;
+        top: 0%;
+    }
+    
+    #projects-paragraph {
+        height: 20em;
+    }
+    
+    #projects-text {
+        width: 100%;
+        bottom: 0%;
+    }
+    
+    #projects-img {
+        width: 100%;
+        top: 0%;
+    }
+    
+    #contact-paragraph {
+        height: 20em;
+    }
+    
+    #contact-text {
+        width: 100%;
+        bottom: 0%;
+    }
+    
+    #contact-img {
+        width: 100%;
+        top: 0%;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    #about-paragraph {
+        height: 20em;
+    }
+    
+    #about-text {
+        text-align: right;
+        left: -10vw;
+    }
+    
+    #about-img {
+        right: -10vw;
+    }
+    
+    
+    #projects-paragraph {
+        height: 20em;
+    }
+    
+    #projects-text {
+        right: -10vw;
+    }
+    
+    #projects-img {
+        text-align: right;
+        left: -10vw;
+    }
+    
+    #contact-paragraph {
+        height: 20em;
+    }
+    
+    #contact-text {
+        text-align: right;
+        left: -10vw;
+    }
+    
+    #contact-img {
+        right: -10vw;
+    }
+}

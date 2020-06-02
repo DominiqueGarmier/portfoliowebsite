@@ -6,7 +6,7 @@
 ::-webkit-scrollbar-track {
   background: #d1d1d1; 
 }
- 
+
 ::-webkit-scrollbar-thumb {
   background: #888; 
 }
@@ -15,6 +15,7 @@
   background: #555555; 
 }
 
+/* general styles */
 * {
     margin: 0em;
     padding: 0em;
@@ -34,16 +35,23 @@ a {
     text-decoration: none;
 }
 
-.menu-btn {
-    height: 2em;
-    width: 2em;
-    padding: 0.5em;
-    position: absolute;
-    right: 0;
+/* menu style */
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
 }
 
-.menu-btn img {
-    max-width: 100%;
+.menu-btn {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    right: 0;
+    height: 2em;
+    width: 2em;
+    margin: 0.5em;
 }
 
 .menu-btn.open {
@@ -54,72 +62,62 @@ a {
     visibility: hidden;
 }
 
-#sidebar {
-    position: fixed;
-    top: 0;
-    right: 0;
+#sidebar .slide-in-menu {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 9;
 }
 
 #sidebar .anim-slide-in {
+    position: absolute;
+    right: 0%;
     animation-duration: 0.25s;
     animation-name: menu-slide-in;
     animation-play-state: paused;
     animation-timing-function: ease-in-out;
-    position: absolute;
-    right: 0em;
 }
 
 @keyframes menu-slide-in {
     from {
-        right: -100vw;
+        right: -100%;
     }
     to {
-        right: 0em;
+        right: 0%;
     }
 }
 
 #sidebar .anim-slide-out {
+    position: absolute;
+    right: -100%;
     animation-duration: 0.25s;
     animation-name: menu-slide-out;
     animation-play-state: paused;
     animation-timing-function: ease-in-out;
-    position: absolute;
-    right: -100vw;
 }
 
 @keyframes menu-slide-out {
     from {
-        right: 0em;
+        right: 0%;
     }
     to {
-        right: -100vw;
+        right: -100%;
     }
-}
-
-#sidebar .slide-in-menu {
-    position: absolute;
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    background-color: black;
-}
-
-#sidebar #opt-container {
-    margin-top: 20vh - 36pt;
-    text-align: center;
 }
 
 #sidebar .option {
-    margin-top: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    text-align: center;
     font-weight: 900;
     font-size: 36pt;
 }
 
-#sidebar .option a {
-    color: white;
-}
-
+/* page content style */
 .content {
-    margin-left: 20vw;
     margin-right: 20vw;
+    margin-left: 20vw;
+    position: relative;
+    z-index: -1;
 }
