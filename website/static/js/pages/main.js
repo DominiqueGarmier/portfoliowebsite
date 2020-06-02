@@ -24,22 +24,33 @@ var BannerScrolling = function() {
 }
 
 var ParagraphScrollIn = function() {
-    var yAbout = AboutText.getBoundingClientRect().top
-    var yProjects = ProjectsText.getBoundingClientRect().top
-    var yContact = ContactText.getBoundingClientRect().top
+    var yAboutText = AboutText.getBoundingClientRect().top
+    var yProjectsText = ProjectsText.getBoundingClientRect().top
+    var yContactText = ContactText.getBoundingClientRect().top
 
-    var AboutAnimProgress = Math.min(Math.max(3*(vh - yAbout)/vh - 0.33, 0), 1)
-    var ProjectsAnimProgress = Math.min(Math.max(3*(vh - yProjects)/vh - 0.33, 0), 1)
-    var ContactAnimProgress = Math.min(Math.max(3*(vh - yContact)/vh - 0.33, 0), 1)
+    var yAboutImage = AboutImage.getBoundingClientRect().top
+    var yProjectsImage = ProjectsImage.getBoundingClientRect().top
+    var yContactImage = ContactImage.getBoundingClientRect().top
 
-    AboutText.style.opacity = AboutAnimProgress
-    AboutImage.style.opacity = AboutAnimProgress
+    var a = 3
+    var b = 0.33
 
-    ProjectsText.style.opacity = ProjectsAnimProgress
-    ProjectsImage.style.opacity = ProjectsAnimProgress
+    var AboutTextAnimProgress = Math.min(Math.max(a*(vh - yAboutText)/vh - b, 0), 1)
+    var ProjectsTextAnimProgress = Math.min(Math.max(a*(vh - yProjectsText)/vh - b, 0), 1)
+    var ContactTextAnimProgress = Math.min(Math.max(a*(vh - yContactText)/vh - b, 0), 1)
 
-    ContactText.style.opacity = ContactAnimProgress
-    ContactImage.style.opacity = ContactAnimProgress
+    var AboutImageAnimProgress = Math.min(Math.max(a*(vh - yAboutImage)/vh - b, 0), 1)
+    var ProjectsImageAnimProgress = Math.min(Math.max(a*(vh - yProjectsImage)/vh - b, 0), 1)
+    var ContactImageAnimProgress = Math.min(Math.max(a*(vh - yContactImage)/vh - b, 0), 1)
+
+    AboutText.style.opacity = AboutTextAnimProgress
+    AboutImage.style.opacity = AboutImageAnimProgress
+
+    ProjectsText.style.opacity = ProjectsTextAnimProgress
+    ProjectsImage.style.opacity = ProjectsImageAnimProgress
+
+    ContactText.style.opacity = ContactTextAnimProgress
+    ContactImage.style.opacity = ContactImageAnimProgress
 }
 
 // animation check on relaod

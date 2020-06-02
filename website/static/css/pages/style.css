@@ -34,6 +34,40 @@
     top: 35%;
 }
 
+/* respnsive title font size */
+@media only screen and (max-width: 300px) {
+    .moving-banner .overlay .title .main-title {
+        font-weight: bold;
+        font-size: 44pt;-
+    }
+
+    .moving-banner .overlay .title .sub-title {
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (min-width: 300px) {
+    .moving-banner .overlay .title .main-title {
+        font-weight: bold;
+        font-size: 52pt;
+    }
+
+    .moving-banner .overlay .title .sub-title {
+        font-size: 14pt;
+    }
+}
+
+@media only screen and (min-width: 500px) {
+    .moving-banner .overlay .title .main-title {
+        font-weight: bold;
+        font-size: 72pt;
+    }
+
+    .moving-banner .overlay .title .sub-title {
+        font-size: 16pt;
+    }
+}
+
 .scroll-down-prompt {
     position: absolute;
     bottom: 0;
@@ -78,42 +112,88 @@
     width: 50%;
 }
 
-#about-paragraph {
-    height: 20em;
+@media only screen and (max-width: 900px) {
+    #about-paragraph {
+        height: 20em;
+    }
+    
+    #about-text {
+        width: 100%;
+        bottom: 0%;
+    }
+    
+    #about-img {
+        width: 100%;
+        top: 0%;
+    }
+    
+    #projects-paragraph {
+        height: 20em;
+    }
+    
+    #projects-text {
+        width: 100%;
+        bottom: 0%;
+    }
+    
+    #projects-img {
+        width: 100%;
+        top: 0%;
+    }
+    
+    #contact-paragraph {
+        height: 20em;
+    }
+    
+    #contact-text {
+        width: 100%;
+        bottom: 0%;
+    }
+    
+    #contact-img {
+        width: 100%;
+        top: 0%;
+    }
 }
 
-#about-text {
-    text-align: right;
-    left: -10vw;
-}
-
-#about-img {
-    right: -10vw;
-}
-
-
-#projects-paragraph {
-    height: 10em;
-}
-
-#projects-text {
-    right: -10vw;
-}
-
-#projects-img {
-    text-align: right;
-    left: -10vw;
-}
-
-#contact-paragraph {
-    height: 20em;
-}
-
-#contact-text {
-    text-align: right;
-    left: -10vw;
-}
-
-#contact-img {
-    right: -10vw;
+@media only screen and (min-width: 900px) {
+    #about-paragraph {
+        height: 20em;
+    }
+    
+    #about-text {
+        text-align: right;
+        left: -10vw;
+    }
+    
+    #about-img {
+        right: -10vw;
+    }
+    
+    
+    #projects-paragraph {
+        height: 20em;
+    }
+    
+    #projects-text {
+        right: -10vw;
+    }
+    
+    #projects-img {
+        text-align: right;
+        left: -10vw;
+    }
+    
+    #contact-paragraph {
+        height: 20em;
+    }
+    
+    #contact-text {
+        text-align: right;
+        left: -10vw;
+    }
+    
+    #contact-img {
+        right: -10vw;
+    }
 }

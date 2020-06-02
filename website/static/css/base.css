@@ -67,6 +67,7 @@ a {
     width: 100%;
     height: 100%;
     background-color: black;
+    z-index: 9;
 }
 
 #sidebar .anim-slide-in {
@@ -114,7 +115,6 @@ a {
 }
 
 /* page content style */
-
 .content {
     margin-right: 20vw;
     margin-left: 20vw;
