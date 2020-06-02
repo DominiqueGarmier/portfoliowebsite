@@ -9,6 +9,8 @@ var AboutImage = document.getElementById("about-img")
 var ProjectsText = document.getElementById("projects-text")
 var ProjectsImage = document.getElementById("projects-img")
 
+var ContactText = document.getElementById("contact-text")
+var ContactImage = document.getElementById("contact-img")
 
 var getViewportSize = function() {
     vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
@@ -24,9 +26,11 @@ var BannerScrolling = function() {
 var ParagraphScrollIn = function() {
     var yAbout = AboutText.getBoundingClientRect().top
     var yProjects = ProjectsText.getBoundingClientRect().top
+    var yContact = ContactText.getBoundingClientRect().top
 
     var AboutAnimProgress = Math.min(Math.max(3*(vh - yAbout)/vh - 0.33, 0), 1)
     var ProjectsAnimProgress = Math.min(Math.max(3*(vh - yProjects)/vh - 0.33, 0), 1)
+    var ContactAnimProgress = Math.min(Math.max(3*(vh - yContact)/vh - 0.33, 0), 1)
 
     AboutText.style.opacity = AboutAnimProgress
     AboutImage.style.opacity = AboutAnimProgress
@@ -34,8 +38,8 @@ var ParagraphScrollIn = function() {
     ProjectsText.style.opacity = ProjectsAnimProgress
     ProjectsImage.style.opacity = ProjectsAnimProgress
 
-    console.log(AboutAnimProgress)
-    console.log(y, yAbout, vh)
+    ContactText.style.opacity = ContactAnimProgress
+    ContactImage.style.opacity = ContactAnimProgress
 }
 
 // animation check on relaod

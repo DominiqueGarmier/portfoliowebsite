@@ -104,3 +104,16 @@
     text-align: right;
     left: -10vw;
 }
+
+#contact-paragraph {
+    height: 20em;
+}
+
+#contact-text {
+    text-align: right;
+    left: -10vw;
+}
+
+#contact-img {
+    right: -10vw;
+}
